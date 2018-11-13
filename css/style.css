@@ -1,0 +1,257 @@
+html{
+    box-sizing: border-box;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden ;
+}
+
+*{
+    box-sizing: inherit;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes upNDan {
+    from{
+        top: 30%
+    }
+    to{
+        top: 70%;
+    }
+}
+
+
+@keyframes movinImg {
+    from{
+        bottom: -50px
+    }
+    to{
+        bottom: -100px;
+    }
+}
+
+@keyframes movinLowImg {
+    from{
+        top: 45%
+    }
+    to{
+        top: 55%
+    }
+}
+
+@keyframes colorChange {
+    from{
+        color: #c7c7c7;
+    }
+    to{
+        color: #1a1a1a;
+    }
+}
+
+.header{
+    background: url(../img/header.png) no-repeat left bottom;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.uk-navbar-container:not(.uk-navbar-transparent) {
+    background: transparent;
+}
+
+nav{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.uk-logo>img{
+    height: 40px;
+}
+
+.uk-navbar-nav>li>a {
+    color: rgba(255, 255, 255, 0.49);
+    text-transform: uppercase;
+    transition: .1s ease-in-out;
+    transition-property: color,background-color;
+}
+.uk-navbar-nav>li.uk-active>a {
+    color: #ffffff;
+}
+
+a.uk-text-capitalize, a.uk-text-capitalize:hover,a.uk-text-capitalize:visited,a.uk-text-capitalize:active{
+    color: #ffffff!important;
+}
+
+.uk-navbar-item .uk-button{
+    background: #ffffff;
+    color: #000000!important;
+    border-radius: 25px;
+    height: 40px;
+    min-height: 20px;
+}
+
+.uk-button-round{
+    border-radius: 25px;
+}
+
+a.uk-light{
+    color: #ffffff!important;
+    text-decoration: none!important;
+}
+
+.uk-navbar-item{
+    min-height: 20px;
+}
+
+.uk-container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.orange{
+    background: #FFCA00;
+    color: #000;
+}
+
+.height-80{
+    min-height: 80%;
+}
+
+.icon-circle{
+    position: absolute;
+    display: inline-block;
+    background: #ffffff;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    right: 50%;
+    bottom: 4vh;
+    transform: translateX(50%);
+    box-shadow: 0 5px 15px rgba(167, 167, 167, 0.73);
+}
+
+.icon-circle span{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000;
+}
+
+.icon-circle:hover span{
+    animation: upNDan 1s infinite;
+}
+
+.uk-sticky.uk-sticky-fixed.uk-sticky-below{
+    background: linear-gradient(to right, #24118b, #22cae1);
+}
+
+#services{
+    padding-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 80vh;
+    z-index: 2;
+    background-color: #fff;
+}
+
+#services .uk-card-title{
+    color: #000;
+    font-weight: 600;
+}
+
+.uk-card-media-top{
+    height: 150px;
+    text-align: center;
+}
+
+.uk-card-media-top img{
+    height: 100%;
+}
+
+#about{
+    padding: 100px 0;
+    min-height: 100vh;
+    background: #F4F9FD;
+}
+
+#testimonials{
+    padding: 80px 0;
+    min-height: 50vh;
+    background: url(../img/testimony.png) no-repeat left bottom;
+    background-size: cover;
+}
+
+#testimonials .uk-card{
+    background: rgba(255, 255, 255, 0.29);
+}
+
+.uk-card-title {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.uk-light{
+    color: #ffffff;!important;
+}
+footer{
+    min-height: 60px;
+}
+
+@media (min-width: 534px) {
+    .footer{
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+.cust-links>a{
+    margin-right: 20px;
+    color: #000!important;
+    text-decoration: none!important;
+}
+
+.uk-navbar-toggle{
+    animation: colorChange 3s infinite alternate;
+}
+
+.movingImageServe>img, .movingImageLow>img{
+    height: 250px;
+}
+
+.movingImageServe{
+    position: absolute;
+    transform: translateX(-60%);
+    animation: movinImg 4s infinite alternate;
+}
+
+.movingImageLow{
+    position: absolute;
+    right: 0;
+    bottom: 50%;
+    transform: translate(60%, -50%);
+    animation: movinLowImg 4s infinite alternate;
+}
+
+@media (max-width: 959px) {
+    .uk-navbar-nav{
+        position: fixed;
+        flex-direction: column;
+        left: 0;
+        top: 80px;
+        width: 100%;
+        /*background: #271297;*/
+        background: linear-gradient(to right, #24118b, #22cae1);
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+    }
+    .uk-navbar-nav>li>a{
+        color: #ffffff;
+    }
+
+    .movingImageServe>img, .movingImageLow>img{
+        height: 100px;
+    }
+}
